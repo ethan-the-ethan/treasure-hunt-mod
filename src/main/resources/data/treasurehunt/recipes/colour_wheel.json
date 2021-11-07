@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "treasurehunt:piece_one"
+        },
+        {
+            "item": "treasurehunt:piece_two"
+        },
+        {
+            "item": "treasurehunt:piece_three"
+        },
+        {
+            "item": "treasurehunt:piece_four"
+        },
+        {
+            "item": "treasurehunt:piece_five"
+        },
+        {
+            "item": "treasurehunt:piece_six"
+        }
+    ],
+    "result": {
+        "item": "treasurehunt:colour_wheel"
+    }
+}

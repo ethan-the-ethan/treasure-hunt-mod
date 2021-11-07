@@ -17,6 +17,10 @@ public class TreasureHunt implements ModInitializer {
 
 	public static final Item PIECE_ONE = new Item(new Item.Settings().group(ItemGroup.MISC));
 	public static final Item PIECE_TWO = new Item(new Item.Settings().group(ItemGroup.MISC));
+	public static final Item PIECE_THREE = new Item(new Item.Settings().group(ItemGroup.MISC));
+	public static final Item PIECE_FOUR = new Item(new Item.Settings().group(ItemGroup.MISC));
+	public static final Item PIECE_FIVE = new Item(new Item.Settings().group(ItemGroup.MISC));
+	public static final Item PIECE_SIX = new Item(new Item.Settings().group(ItemGroup.MISC));
 
 	@Override
 	public void onInitialize() {
@@ -28,5 +32,9 @@ public class TreasureHunt implements ModInitializer {
 
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_one"), PIECE_ONE);
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_two"), PIECE_TWO);
+		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_three"), PIECE_THREE);
+		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_four"), PIECE_FOUR);
+		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_five"), PIECE_FIVE);
+		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_six"), PIECE_SIX);	
 	}
 }

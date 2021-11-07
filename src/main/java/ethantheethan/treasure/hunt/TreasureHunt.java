@@ -49,7 +49,7 @@ public class TreasureHunt implements ModInitializer {
 		@Override
 		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
 			// formatted red text
-			tooltip.add( new TranslatableText("item.treasurehunt.piece_two.tooltip").formatted(Formatting.BLUE) );
+			tooltip.add( new TranslatableText("item.treasurehunt.piece_two.tooltip").formatted(Formatting.GOLD) );
 		}
 	}
 
@@ -60,7 +60,7 @@ public class TreasureHunt implements ModInitializer {
 		@Override
 		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
 			// formatted red text
-			tooltip.add( new TranslatableText("item.treasurehunt.piece_three.tooltip").formatted(Formatting.GREEN) );
+			tooltip.add( new TranslatableText("item.treasurehunt.piece_three.tooltip").formatted(Formatting.YELLOW) );
 		}
 	}
 
@@ -71,7 +71,7 @@ public class TreasureHunt implements ModInitializer {
 		@Override
 		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
 			// formatted red text
-			tooltip.add( new TranslatableText("item.treasurehunt.piece_four.tooltip").formatted(Formatting.YELLOW) );
+			tooltip.add( new TranslatableText("item.treasurehunt.piece_four.tooltip").formatted(Formatting.GREEN) );
 		}
 	}
 
@@ -82,7 +82,7 @@ public class TreasureHunt implements ModInitializer {
 		@Override
 		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
 			// formatted red text
-			tooltip.add( new TranslatableText("item.treasurehunt.piece_five.tooltip").formatted(Formatting.GOLD) );
+			tooltip.add( new TranslatableText("item.treasurehunt.piece_five.tooltip").formatted(Formatting.BLUE) );
 		}
 	}
 
@@ -103,7 +103,7 @@ public class TreasureHunt implements ModInitializer {
 		}
 		@Override
 		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-			tooltip.add( new TranslatableText("item.treasurehunt.colour_wheel.tooltip").formatted(Formatting.AQUA).formatted(Formatting.ITALIC));
+			tooltip.add( new TranslatableText("item.treasurehunt.colour_wheel.tooltip").formatted(Formatting.AQUA));
 		}
 	}
 
@@ -113,7 +113,7 @@ public class TreasureHunt implements ModInitializer {
 		}
 		@Override
 		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-			tooltip.add(new TranslatableText("item.treasurehunt.empty_colour_wheel.tooltip"));
+			tooltip.add(new TranslatableText("item.treasurehunt.empty_colour_wheel.tooltip").formatted(Formatting.GRAY).formatted(Formatting.ITALIC));
 		}
 	}
 
@@ -121,8 +121,8 @@ public class TreasureHunt implements ModInitializer {
 	public static final PieceTwo PIECE_TWO = new PieceTwo(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
 	public static final PieceThree PIECE_THREE = new PieceThree(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
 	public static final PieceFour PIECE_FOUR = new PieceFour(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
-	public static final PieceFive PIECE_FIVE = new PieceFive(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.RARE));
-	public static final PieceSix PIECE_SIX = new PieceSix(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.RARE));
+	public static final PieceFive PIECE_FIVE = new PieceFive(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
+	public static final PieceSix PIECE_SIX = new PieceSix(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
 	public static final ColourWheel COLOUR_WHEEL = new ColourWheel(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.EPIC));
 	public static final EmptyColourWheel EMPTY_COLOUR_WHEEL = new EmptyColourWheel(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.RARE));
 	
@@ -132,7 +132,7 @@ public class TreasureHunt implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Starting Treasure Hunt Mod...");
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_one"), PIECE_ONE);
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_two"), PIECE_TWO);
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_three"), PIECE_THREE);

@@ -6,15 +6,16 @@
   "name": "Ethan's Treasure Hunt Mod",
   "description": "Custom mod for avs' Steel Ball Run!",
   "authors": [
-    "ethan_the_ethan"
+    "ethan_the_ethan (Programming)",
+    "the pink walrus? (Art)"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "homepage": "https://github.com/ethan-the-ethan/treasure-hunt-mod",
+    "sources": "https://github.com/ethan-the-ethan/treasure-hunt-mod"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "CC-BY-4.0",
+  "icon": "assets/treasurehunt/icon.png",
 
   "environment": "*",
   "entrypoints": {

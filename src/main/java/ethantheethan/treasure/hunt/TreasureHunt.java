@@ -103,8 +103,17 @@ public class TreasureHunt implements ModInitializer {
 		}
 		@Override
 		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-			// formatted red text
 			tooltip.add( new TranslatableText("item.treasurehunt.colour_wheel.tooltip").formatted(Formatting.AQUA).formatted(Formatting.ITALIC));
+		}
+	}
+
+	public static class EmptyColourWheel extends Item {
+		public EmptyColourWheel(Settings settings) {
+			super(settings);
+		}
+		@Override
+		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
+			tooltip.add(new TranslatableText("item.treasurehunt.empty_colour_wheel.tooltip"));
 		}
 	}
 
@@ -115,6 +124,7 @@ public class TreasureHunt implements ModInitializer {
 	public static final PieceFive PIECE_FIVE = new PieceFive(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.RARE));
 	public static final PieceSix PIECE_SIX = new PieceSix(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.RARE));
 	public static final ColourWheel COLOUR_WHEEL = new ColourWheel(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.EPIC));
+	public static final EmptyColourWheel EMPTY_COLOUR_WHEEL = new EmptyColourWheel(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.RARE));
 	
 	@Override
 	public void onInitialize() {
@@ -130,5 +140,6 @@ public class TreasureHunt implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_five"), PIECE_FIVE);
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_six"), PIECE_SIX);
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "colour_wheel"), COLOUR_WHEEL);
+		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "empty_colour_wheel"), EMPTY_COLOUR_WHEEL);
 	}
 }

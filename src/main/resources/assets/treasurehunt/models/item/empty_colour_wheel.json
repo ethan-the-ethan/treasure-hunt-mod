@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "treasurehunt:item/empty_colour_wheel"
+    }
+}

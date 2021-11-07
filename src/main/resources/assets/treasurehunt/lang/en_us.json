@@ -1,0 +1,17 @@
+{
+    "item.treasurehunt.piece_one": "Piece 1",
+    "item.treasurehunt.piece_two": "Piece 2",
+    "item.treasurehunt.piece_three": "Piece 3",
+    "item.treasurehunt.piece_four": "Piece 4",
+    "item.treasurehunt.piece_five": "Piece 5",
+    "item.treasurehunt.piece_six": "Piece 6",
+    "item.treasurehunt.colour_wheel": "Colour Wheel",
+    "item.treasurehunt.piece_one.tooltip": "It glows a soft red",
+    "item.treasurehunt.piece_two.tooltip": "It has a mystical, almost magical quality",
+    "item.treasurehunt.piece_three.tooltip": "Its faint green aura makes you shiver on touch",
+    "item.treasurehunt.piece_four.tooltip": "You can't stop looking at the swirls of yellow dust inside its shell",
+    "item.treasurehunt.piece_five.tooltip": "The orange light shines blindlingly",
+    "item.treasurehunt.piece_six.tooltip": "The power is too much",
+    "item.treasurehunt.colour_wheel.tooltip": "Though it, you see the whole world in a different way",
+    "itemGroup.treasurehunt.treasurehunt": "Treasure Hunt Mod"
+}

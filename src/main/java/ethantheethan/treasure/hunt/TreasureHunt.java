@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -117,6 +118,26 @@ public class TreasureHunt implements ModInitializer {
 		}
 	}
 
+	public static class Scroll extends Item {
+		public Scroll(Settings settings) {
+			super(settings);
+		}
+		@Override
+		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
+			tooltip.add(new TranslatableText("item.treasurehunt.scroll.tooltip"));
+		}
+	}
+
+	public static class ClueBook extends Item {
+		public ClueBook(Settings settings) {
+			super(settings);
+		}
+		@Override
+		public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
+			tooltip.add(new TranslatableText("item.treasurehunt.clue_book.tooltip"));
+		}
+	}
+	
 	public static final PieceOne PIECE_ONE = new PieceOne(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
 	public static final PieceTwo PIECE_TWO = new PieceTwo(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
 	public static final PieceThree PIECE_THREE = new PieceThree(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
@@ -124,7 +145,9 @@ public class TreasureHunt implements ModInitializer {
 	public static final PieceFive PIECE_FIVE = new PieceFive(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
 	public static final PieceSix PIECE_SIX = new PieceSix(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
 	public static final ColourWheel COLOUR_WHEEL = new ColourWheel(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.EPIC));
-	public static final EmptyColourWheel EMPTY_COLOUR_WHEEL = new EmptyColourWheel(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.RARE));
+	public static final EmptyColourWheel EMPTY_COLOUR_WHEEL = new EmptyColourWheel(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.COMMON));
+	public static final Scroll SCROLL = new Scroll(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
+	public static final ClueBook CLUE_BOOK = new ClueBook(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.RARE));
 	
 	@Override
 	public void onInitialize() {
@@ -141,5 +164,7 @@ public class TreasureHunt implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "piece_six"), PIECE_SIX);
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "colour_wheel"), COLOUR_WHEEL);
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "empty_colour_wheel"), EMPTY_COLOUR_WHEEL);
+		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "scroll"), SCROLL);
+		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "clue_book"), CLUE_BOOK);
 	}
 }

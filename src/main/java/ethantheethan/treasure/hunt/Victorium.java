@@ -8,7 +8,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
-public class Victorium implements ArmorMaterial{
+public class Victorium implements ArmorMaterial {
     private static final int[] BASE_DURABILITY = new int[] {13, 15, 16, 11};
 	private static final int[] PROTECTION_VALUES = new int[] {1, 1, 0, 0};
  
@@ -34,13 +34,13 @@ public class Victorium implements ArmorMaterial{
  
 	@Override
 	public Ingredient getRepairIngredient() {
-		return Ingredient.ofItems(RegisterItems.X);
+		return Ingredient.ofItems();
 	}
  
 	@Override
 	public String getName() {
 		// Must be all lowercase
-		return "name";
+		return "victorium";
 	}
  
 	@Override
@@ -54,14 +54,3 @@ public class Victorium implements ArmorMaterial{
 	}
 }
 
-public static class RegisterItems {
-     
-    public static final ArmorMaterial CUSTOM_ARMOR_MATERIAL = new Victorium();
-    public static final Item CUSTOM_MATERIAL = new Victorium(new Item.Settings().group(TreasureHunt.ITEM_GROUP));
-    // If you made a new material, this is where you would note it.
-    public static final Item CUSTOM_MATERIAL_HELMET = new ArmorItem(CUSTOM_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Settings().group(TreasureHunt.ITEM_GROUP));
-    public static final Item CUSTOM_MATERIAL_CHESTPLATE = new ArmorItem(CUSTOM_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Settings().group(TreasureHunt.ITEM_GROUP));
-    public static final Item CUSTOM_MATERIAL_LEGGINGS = new ArmorItem(CUSTOM_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Settings().group(TreasureHunt.ITEM_GROUP));
-    public static final Item CUSTOM_MATERIAL_BOOTS = new ArmorItem(CUSTOM_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings().group(TreasureHunt.ITEM_GROUP));
- 
-}

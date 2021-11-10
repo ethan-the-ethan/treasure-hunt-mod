@@ -4,6 +4,8 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -148,6 +150,8 @@ public class TreasureHunt implements ModInitializer {
 	public static final Scroll SCROLL = new Scroll(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.UNCOMMON));
 	public static final ClueBook CLUE_BOOK = new ClueBook(new FabricItemSettings().group(TreasureHunt.ITEM_GROUP).maxCount(1).rarity(Rarity.RARE));
 	
+	public static final ArmorMaterial VICTORIUM_ARMOR_MATERIAL = new Victorium();
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -165,5 +169,9 @@ public class TreasureHunt implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "empty_colour_wheel"), EMPTY_COLOUR_WHEEL);
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "scroll"), SCROLL);
 		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "clue_book"), CLUE_BOOK);
+
+		// Register "Armour"
+		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "victorium_helmet"), new BaseArmour(VICTORIUM_ARMOR_MATERIAL, EquipmentSlot.HEAD));
+		Registry.register(Registry.ITEM, new Identifier("treasurehunt", "victorium_chestplate"), new BaseArmour(VICTORIUM_ARMOR_MATERIAL, EquipmentSlot.CHEST));
 	}
 }

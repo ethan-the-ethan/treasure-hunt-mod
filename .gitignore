@@ -31,3 +31,9 @@ bin/
 # fabric
 
 run/
+
+# art stuff
+
+*.xcf
+*_old.png
+*_a.png
